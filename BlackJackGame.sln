@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJackGame", "BlackJackGame\BlackJackGame.csproj", "{BFF444B0-8BD3-4225-85CB-CC5CC620914F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameCardLib", "GameCardLib\GameCardLib.csproj", "{DBBBE750-5F37-48B4-8EE4-7CB036B54D1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilitiesLib", "UtilitiesLib\UtilitiesLib.csproj", "{4939876E-6B08-40A3-AA6C-DA56E10F1B74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{BFF444B0-8BD3-4225-85CB-CC5CC620914F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFF444B0-8BD3-4225-85CB-CC5CC620914F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFF444B0-8BD3-4225-85CB-CC5CC620914F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBBBE750-5F37-48B4-8EE4-7CB036B54D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBBBE750-5F37-48B4-8EE4-7CB036B54D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBBBE750-5F37-48B4-8EE4-7CB036B54D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBBBE750-5F37-48B4-8EE4-7CB036B54D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4939876E-6B08-40A3-AA6C-DA56E10F1B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4939876E-6B08-40A3-AA6C-DA56E10F1B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4939876E-6B08-40A3-AA6C-DA56E10F1B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4939876E-6B08-40A3-AA6C-DA56E10F1B74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
