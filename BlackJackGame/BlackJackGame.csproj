@@ -12,4 +12,9 @@
     <Folder Include="img\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GameCardLib\GameCardLib.csproj" />
+    <ProjectReference Include="..\UtilitiesLib\UtilitiesLib.csproj" />
+  </ItemGroup>
+
 </Project>
