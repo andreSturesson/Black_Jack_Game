@@ -9,17 +9,17 @@ namespace UtilitiesLib
 {
     public class Logger
     {
-        private string m_exePath = string.Empty;
+        private string path = string.Empty;
         public Logger(string logMessage)
         {
             LogWrite(logMessage);
         }
         public void LogWrite(string logMessage)
         {
-            m_exePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             try
             {
-                using (StreamWriter w = File.AppendText(m_exePath + "\\" + "log.txt"))
+                using (StreamWriter w = File.AppendText(path + "\\" + "log.txt"))
                 {
                     Log(logMessage, w);
                 }
