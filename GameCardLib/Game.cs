@@ -79,7 +79,7 @@ namespace GameCardLib
 
         public void isHighScore(Player current)
         {
-            if (current.Hand.Score > highestScore && current.Hand.Score < 21)
+            if (current.Hand.Score > highestScore && current.Hand.Score <= 21)
             {
                 highestScore = current.Hand.Score;
             }
@@ -90,17 +90,17 @@ namespace GameCardLib
             List<Player> Winners = new List<Player>();
             foreach (Player player in Players)
             {
-                if (player.Hand.Score <= 21 && player.Hand.Score >= highestScore)
-                    if (Dealer.Hand.Score <= 21 && Dealer.Hand.Score > highestScore)
-                    {
-                        Dealer.IsWinner = true;
-                        Winners.Add(Dealer);
-                        return Winners;
-                    }
-                    else
-                    {
-                        Winners.Add(player);
-                    }
+                if (player.Hand.Score <= 21)
+                {
+                    player.IsWinner = true;
+                    Winners.Add(player);
+                }
+            }
+            if (Dealer.Hand.Score <= 21 && Dealer.Hand.Score > highestScore)
+            {
+                Winners.Clear();
+                Dealer.IsWinner = true;
+                Winners.Add(Dealer);
             }
             return Winners;
         }

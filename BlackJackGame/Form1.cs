@@ -136,6 +136,7 @@ namespace BlackJackGame
                 Hit.Enabled = true;
                 Shuffle.Enabled = true;
             }
+            game.isHighScore(current);
         }
 
         public void updateGUI()
@@ -171,6 +172,7 @@ namespace BlackJackGame
             {
                 game.Players[currentPlayer].IsFinished = true;
                 updateGUI();
+                return;
             }
             game.hit(current);
             updateGUI();
