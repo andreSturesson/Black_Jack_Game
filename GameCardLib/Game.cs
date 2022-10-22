@@ -93,8 +93,11 @@ namespace GameCardLib
             {
                 if (player.Hand.Score <= 21)
                 {
-                    player.IsWinner = true;
-                    Winners.Add(player);
+                    if (Dealer.Hand.Score <= 21 && player.Hand.Score > Dealer.Hand.Score)
+                    {
+                        player.IsWinner = true;
+                        Winners.Add(player);
+                    }
                 }
             }
             if (Dealer.Hand.Score <= 21 && Dealer.Hand.Score > highestScore)
