@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.startGame = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.numberOfDecks = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // playerCount
@@ -53,7 +53,7 @@
             // 
             // startGame
             // 
-            this.startGame.Location = new System.Drawing.Point(147, 120);
+            this.startGame.Location = new System.Drawing.Point(23, 126);
             this.startGame.Name = "startGame";
             this.startGame.Size = new System.Drawing.Size(75, 23);
             this.startGame.TabIndex = 3;
@@ -70,19 +70,19 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Number of decks";
             // 
-            // textBox1
+            // numberOfDecks
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 5;
+            this.numberOfDecks.Location = new System.Drawing.Point(12, 80);
+            this.numberOfDecks.Name = "numberOfDecks";
+            this.numberOfDecks.Size = new System.Drawing.Size(100, 23);
+            this.numberOfDecks.TabIndex = 5;
             // 
             // NewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 172);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(127, 172);
+            this.Controls.Add(this.numberOfDecks);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.startGame);
             this.Controls.Add(this.label1);
@@ -101,6 +101,6 @@
         private Label label1;
         private Button startGame;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox numberOfDecks;
     }
 }
