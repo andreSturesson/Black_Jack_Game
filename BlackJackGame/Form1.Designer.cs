@@ -131,6 +131,7 @@
             this.DealerCardImages.Name = "DealerCardImages";
             this.DealerCardImages.Size = new System.Drawing.Size(312, 354);
             this.DealerCardImages.TabIndex = 12;
+            this.DealerCardImages.Paint += new System.Windows.Forms.PaintEventHandler(this.DealerCardImages_Paint);
             // 
             // groupBox1
             // 

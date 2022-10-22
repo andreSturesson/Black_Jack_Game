@@ -22,7 +22,7 @@ namespace GameCardLib
             Cards.Add(card);
         }
 
-        public void DeleteAllCards()
+        public void ResetCards()
         {
             cards.Clear();
         }
@@ -61,16 +61,19 @@ namespace GameCardLib
             return Cards.Count;
         }
 
-        public void GenerateCards()
+        public void GenerateCards(int NumberOfDecks)
         {
             int index = 0;
-            foreach (Enums.Suit suit in Enum.GetValues(typeof(Enums.Suit)))
+            for (int i = 0; i < NumberOfDecks; i++)
             {
-                foreach (Enums.Values value in Enum.GetValues(typeof(Enums.Values)))
+                foreach (Enums.Suit suit in Enum.GetValues(typeof(Enums.Suit)))
                 {
-                    Card card = new Card(suit, value);
-                    cards.Add(card);
-                    index++;
+                    foreach (Enums.Values value in Enum.GetValues(typeof(Enums.Values)))
+                    {
+                        Card card = new Card(suit, value);
+                        cards.Add(card);
+                        index++;
+                    }
                 }
             }
             Shuffle();

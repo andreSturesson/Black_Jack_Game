@@ -28,5 +28,6 @@ namespace GameCardLib
         public string Name1 { get => Name; set => Name = value; }
         public Guid Id { get => id; }
         public bool IsWinner { get => isWinner; set => isWinner = value; }
+
     }
 }

@@ -12,6 +12,7 @@ namespace BlackJackGame
 {
     public partial class NewGame : Form
     {
+        private AddPlayers ap = new AddPlayers();
         public NewGame()
         {
             InitializeComponent();
@@ -24,9 +25,19 @@ namespace BlackJackGame
 
         private void startGame_Click(object sender, EventArgs e)
         {
-            Form1.startGame = true;
-            Form1.playerCount = Int32.Parse(playerCount.Text);
-            this.Close();
+            if (!playerCount.Text.Equals("")|| !numberOfDecks.Text.Equals(""))
+            {
+                Form1.playerCount = Int32.Parse(playerCount.Text);
+                Form1.NumberOfDecks = Int32.Parse(numberOfDecks.Text);
+                ap.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                //SEND LOGGER EVENT MSG
+                //NO TEXTBOXES CAN BE EMPTY...
+            }
+
         }
 
         private void NewGame_Load(object sender, EventArgs e)
