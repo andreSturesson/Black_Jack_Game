@@ -68,7 +68,6 @@ namespace BlackJackGame
                 String scores = "";
                 foreach (Player player in Winners)
                 {
-                    MessageBox.Show(player.Name1, "Game Over");
                     names += ", " + player.Name1;
                     scores += ", " + player.Hand.Score;
                 }
