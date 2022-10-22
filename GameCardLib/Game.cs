@@ -27,7 +27,8 @@ namespace GameCardLib
             this.dealer = new Player(Guid.NewGuid(), "Dealer");
             this.players = new List<Player>();
             this.mainDeck = new Deck();
-            this.mainDeck.GenerateCards(NumberOfDecks);
+            this.mainDeck.NumberOfDecks = NumberOfDecks;
+            this.mainDeck.GenerateCards();
         }
 
         public bool isWinner(Player player)

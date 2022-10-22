@@ -9,12 +9,14 @@ namespace GameCardLib
     public class Deck
     {
         private List<Card> cards;
+        private int numberOfDecks;
 
         public List<Card> Cards { get => cards; set => cards = value; }
+        public int NumberOfDecks { get => numberOfDecks; set => numberOfDecks = value; }
 
         public Deck()
         {
-            Cards = new List<Card>();
+            this.Cards = new List<Card>();
         }
 
         public void AddCard(Card card)
@@ -39,6 +41,9 @@ namespace GameCardLib
 
         public Card getCard()
         {
+            if(Cards.Count == 1) {
+                GenerateCards();
+            }
             Card card = cards[0];
             cards.RemoveAt(0);
             return card;
@@ -61,10 +66,10 @@ namespace GameCardLib
             return Cards.Count;
         }
 
-        public void GenerateCards(int NumberOfDecks)
+        public void GenerateCards()
         {
             int index = 0;
-            for (int i = 0; i < NumberOfDecks; i++)
+            for (int i = 0; i < numberOfDecks; i++)
             {
                 foreach (Enums.Suit suit in Enum.GetValues(typeof(Enums.Suit)))
                 {
